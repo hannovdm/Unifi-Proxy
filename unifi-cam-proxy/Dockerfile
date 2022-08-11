@@ -13,7 +13,7 @@ RUN pip install .
 
 COPY ./docker/entrypoint.sh /
 COPY ./docker/client.pem /
-RUN chown -R /app
+RUN chown -R guest /app
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["unifi-cam-proxy"]
